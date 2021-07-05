@@ -1,0 +1,519 @@
+@charset "UTF-8"
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Sans JP", MyYuGothicM, YuGothic, -apple-system,
+    BlinkMacSystemFont, "Hiragino kaku Gothic ProN", Meiryo, Verdana, arial,
+    helvetica, sans-serif;
+  font-size: 16px;
+  color: #121212;
+  line-height: 1.7;
+}
+
+header {
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  background-color: white;
+}
+
+main {
+  width: 100%;
+}
+
+/* ヘッダー */
+
+/* ロゴとタイトル　*/
+
+.header-left a {
+  display: block;
+  display: flex;
+  height: 100%;
+  width: 160px;
+  padding-left: 15px;
+  align-items: center;
+}
+
+.header-left img {
+  height: 100%;
+  width: 160px;
+  max-width: 100%;
+  margin-left: 16px;
+}
+
+.header-title {
+  padding-left: 16px;
+  width: 202px;
+  font-weight: bold;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.header-title span {
+  font-size: 18px;
+}
+
+a {
+  color: #121212;
+}
+
+ul {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+/* アコーディオンメニュー */
+
+.header-right {
+}
+
+/* ul */
+.ac-main {
+  display: flex;
+  width: 100%;
+}
+
+/* li */
+.ac-title {
+  position: relative;
+}
+
+.atag {
+  display: block;
+  padding: 0px 15px;
+  line-height: 70px;
+  height: 70px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.ac-title a:hover {
+  background-color: #bdebf5;
+}
+
+/* ul */
+.ac-menu {
+  width: 180px;
+  display: block;
+  flex-direction: column;
+  font-size: 16px;
+  position: absolute;
+  white-space: nowrap;
+  background-color: rgb(229, 248, 248);
+}
+
+.submenu1,
+.submenu2 {
+  width: 240px;
+}
+
+/* li */
+.menu-name {
+  height: 50px;
+  display: none;
+}
+
+.menu-name a {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 50px;
+  width: 100%;
+  height: 50px;
+  padding: 0px 15px;
+}
+
+.menu-name a:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.last-btn {
+  color: white;
+  background-color: #2498b3;
+  line-height: 70px;
+}
+
+.last-btn a {
+  height: 100%;
+  display: block;
+  color: inherit;
+  font-size: 16px;
+  padding: 0px 15px;
+}
+
+* {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.p-hamburger {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  position: relative;
+}
+
+.p-hamburger::before,
+.p-hamburger::after {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background: #2cbbd9;
+  position: absolute;
+  left: calc(50% - (22px / 2));
+  display: block;
+  transition: transform 0.2s;
+}
+
+.p-hamburger::before {
+  top: 15px;
+}
+
+.p-hamburger::after {
+  top: 33px;
+}
+
+.p-hamburger span {
+  width: 22px;
+  height: 2px;
+  font-size: 0px;
+  background: #2cbbd9;
+  background-size: auto 1px;
+  position: absolute;
+  left: calc(50% - (22px / 2));
+  top: 24px;
+  transition: transform 0.2s;
+}
+
+.p-hamburger.is-open::before {
+  transform: rotate(45deg);
+  top: 24px;
+}
+
+.p-hamburger.is-open::after {
+  transform: rotate(-45deg);
+  top: 24px;
+}
+
+.p-hamburger.is-open span {
+  background: none;
+}
+
+@media (max-width: 1290px) {
+  .header-title {
+    display: none;
+  }
+}
+
+@media (max-width: 1260px) {
+  .ac-title a {
+    padding: 0px 10px;
+  }
+  .last-btn a {
+    padding: 0px 10px;
+  }
+}
+
+/* メイン */
+
+.maintop {
+  position: relative;
+  background: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero3.png)
+    no-repeat center center/cover fixed;
+  height: 680px;
+  padding-top: 70px;
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .maintop {
+    padding-top: 50px;
+  }
+  .header-left a {
+    padding-left: 0px;
+  }
+  .header-left img {
+    height: 30px;
+    margin: 10px 0px;
+  }
+  header {
+    height: 50px;
+  }
+  .last-btn {
+    height: 50px;
+    display: none;
+  }
+  .ac-title {
+    display: none;
+  }
+}
+
+@media (min-width: 1202px) {
+  .p-hamburger {
+    display: none;
+  }
+}
+
+.stackimg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.layer1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 80px;
+  background: url(http://176.34.11.254/wp-content/themes/raisetech2019/./common/img/bg-hero1.png)
+    no-repeat center center;
+  height: 650px;
+  z-index: 200;
+}
+
+.layer2 {
+  background: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero2.png)
+    no-repeat center center;
+  height: 650px;
+  z-index: 100;
+}
+
+.innerbox {
+  background-color: white;
+  padding: 43px 40px 19px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.innerlogo img {
+  width: 280px;
+}
+
+.innerbox p {
+  font-weight: 800;
+  margin: 20.8px 0px 8px 0px;
+  line-height: 24px;
+}
+
+.innerbtn {
+  display: inline-block;
+  padding: 20px 40px;
+  margin-top: 20px;
+  background-color: #2498b3;
+  border-radius: 5px;
+}
+
+.innerbtn a {
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.main-under {
+  background-color: black;
+  padding-bottom: 64px;
+}
+
+.bottom-contents {
+  width: 100％;
+  display: flex;
+  justify-content: center;
+  margin-top: -130px;
+}
+
+.icon {
+  width: 230px;
+  height: 230px;
+  border: solid 6px black;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.content {
+  width: 229px;
+  text-align: center;
+  margin: 0 50px;
+  z-index: 700;
+}
+
+.content-ttl {
+  color: #fff;
+  margin: 4.8px 0 0 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.content-description {
+  color: #fff;
+  margin: 8px 0 0 0;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+}
+
+i {
+  padding-top: 56px;
+  -webkit-text-stroke: 5px #fff;
+}
+
+@media (max-width: 767px) {
+  .maintop {
+    align-items: flex-end;
+    background-size: 800px;
+    background-position: center -30px;
+    height: 370px;
+  }
+  .layer1 {
+    background-size: 800px;
+    background-position: center -30px;
+  }
+  .layer2 {
+    background-size: 800px;
+    background-position: center -25px;
+  }
+  .innerbox {
+    position: absolute;
+    top: 170px;
+    width: 100%;
+    max-width: 100%;
+    padding: 9px 0 13px;
+    border-radius: 0;
+    align-items: center;
+  }
+  .innerlogo {
+    display: none;
+  }
+  .innerbox p {
+    margin: 6.5px 0;
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 700;
+  }
+  .innerbtn {
+    margin-top: 8px;
+    padding: 10px 15px;
+  }
+  .innerbtn a {
+    font-size: 16px;
+  }
+  .bottom-contents {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 0;
+    padding-top: 64px;
+    align-items: center;
+  }
+  .content {
+    width: auto;
+    margin: 10px 0 20px;
+  }
+  .icon {
+    margin: 0 auto;
+  }
+}
+
+/* ハンバーガーメニュー */
+
+.h-nav {
+  display: none;
+  position: absolute;
+  font-size: 16px;
+  top: 50px;
+  width: 100%;
+}
+
+.h-nav.is-open {
+  display: none;
+}
+
+
+.h-nav .h-title {
+  line-height: 26px;
+  background-color: #fff;
+  font-weight: 700;
+}
+
+.atag2 {
+  display: block;
+  width: 100%;
+  padding: 10px 10px 10px 10px;
+  color: #131d34;
+  position: relative;
+}
+
+.atag-single {
+  display: block;
+  width: 100%;
+  padding: 10px 10px 10px 10px;
+  color: #131d34;
+  position: relative;
+}
+
+.atag2::before {
+  content: "";
+  height: 2.5px;
+  width: 24px;
+  right: 13px;
+  top: 48%;
+  display: block;
+  position: absolute;
+  background-color: #121212;
+}
+
+.atag2::after {
+  content: "";
+  height: 24px;
+  width: 2.5px;
+  right: 24px;
+  top: 26%;
+  display: block;
+  position: absolute;
+  background-color: #121212;
+}
+
+.close1.is-open::after {
+  display: none;
+}
+
+.close2.is-open::after {
+  display: none;
+}
+
+.close4.is-open::after {
+  display: none;
+}
+
+.close5.is-open::after {
+  display: none;
+}
+.close6.is-open::after {
+  display: none;
+}
+
+.atag2:hover {
+  background-color: #e4fbfd;
+}
+
+.h-name {
+  display: none;
+}
+
+.h-name a {
+  line-height: 46px;
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  padding: 0px 10px;
+}
+
+.h-name a:hover {
+  background-color: #e4fbfd;
+}
+
