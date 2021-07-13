@@ -62,6 +62,7 @@ $(function() {
 $(window).on('resize', function () {
   　if (window.matchMedia('(min-width:1202px)').matches) {
   　　$(".h-nav").slideUp(200);
+     $('.p-hamburger').removeClass('is-open');
   　}
   });
 
